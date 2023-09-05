@@ -1,0 +1,146 @@
+<header class="header">
+  <div class="boss">
+    <div class="m1">
+      <button id="menuButton" (click)="toggleMenu()">
+        <i class="bx bx-menu"></i>
+      </button>
+
+      <div id="menu" [ngClass]="{ open: isMenuOpen }">
+        <div class="bankai">
+          <button>
+            <i class="bx bxs-home" style="color: #ffffff"></i><span>Home</span>
+          </button>
+          <button><i class="material-icons">bolt</i><span>Shorts</span></button>
+          <button>
+            <i class="material-icons">subscriptions</i>
+            <span>Subscriptions</span>
+          </button>
+        </div>
+        <div class="bankai">
+          <button>
+            <i class="material-icons">video_library</i><span>Library</span>
+          </button>
+          <button>
+            <i class="material-icons">history</i><span>History</span>
+          </button>
+          <button>
+            <i class="material-icons">replay</i> <span>Watch Later</span>
+          </button>
+          <button>
+            <i class="material-icons">thumb_up</i> <span>Liked Videos</span>
+          </button>
+        </div>
+        <div class="bankai">
+          <p>Explore</p>
+          <button>
+            <i class="material-icons">local_fire_department</i
+            ><span>Trending</span>
+          </button>
+          <button>
+            <i class="material-icons">music_note</i><span>Music</span>
+          </button>
+          <button>
+            <i class="material-icons">sports_esports</i> <span>Gaming</span>
+          </button>
+          <button>
+            <i class="material-icons">newspaper</i> <span>News</span>
+          </button>
+          <button>
+            <i class="material-icons">emoji_events</i> <span>Sports</span>
+          </button>
+        </div>
+      </div>
+
+      <img src="../../assets/Screenshot 2023-08-22 110622.png" alt="" />
+    </div>
+
+    <section class="m2">
+      <main class="bar">
+        <input type="text" placeholder="Search" />
+        <button><i class="bx bx-search"></i></button>
+      </main>
+      <button class="mic">
+        <i class="bx bx-microphone" style="color: #ffffff"></i>
+      </button>
+    </section>
+
+    <section class="logs">
+      <main class="nn">
+        <button>
+          <i class="material-icons" style="color: #ffffff">more_vert</i>
+        </button>
+        <div class="drop">
+          <div>
+            <i class="material-icons">admin_panel_settings</i>
+            <span>Your data in YouTube</span>
+          </div>
+          <hr class="hr">          
+          <div>
+            <i class="material-icons">brightness_3</i>
+            <span>Appearance: Device theme</span>
+          </div>
+          <div>
+            <i class="material-icons">translate</i>
+            <span>Language: English</span>
+          </div>
+          <div>
+            <i class="material-icons">admin_panel_settings</i>
+            <span>Restricted Mode: Off</span>
+          </div>
+          <div>
+            <i class="material-icons">language</i>
+            <span>Location: Nigeria</span>
+          </div>
+          <div>
+            <i class="material-icons">keyboard</i>
+            <span>Keyboard Shortcuts</span>
+          </div>
+          <hr class="hr">
+          <div>
+            <i class="material-icons">settings</i>
+            <span>Settings</span>
+          </div>
+          <hr class="hr">
+          <div>
+            <i class="material-icons">help</i>
+            <span>Help</span>
+          </div>
+          <div>
+            <i class="material-icons">feedback</i>
+            <span>Send</span>
+          </div>
+        </div>
+      </main>
+
+      <button class="s" routerLink="/SignUp">
+        <i class="material-icons" style="color: #3ea6ff">account_circle</i
+        ><span>Sign in</span>
+      </button>
+      <!-- <button><i class="bx bx-bell" style="color: #ffffff"></i></button>
+      <button style="background-color: white">
+        <img src="../../assets/luffy.png" alt="" />
+      </button> -->
+    </section>
+  </div>
+  <div class="boss2">
+    <div class="boss2A">
+      <button style="background-color: white">
+        <span style="color: black">All</span>
+      </button>
+      <button><span>Music</span></button>
+      <button><span>Javascript</span></button>
+      <button><span>Computer Programming</span></button>
+      <button><span>Gaming</span></button>
+      <button><span>Nollywood</span></button>
+      <button><span>Liverpool Fc</span></button>
+      <button><span>One Piece</span></button>
+      <button><span>Manga</span></button>
+      <button><span>EAFC 24</span></button>
+      <button><span>Broda Shagi</span></button>
+      <button><span>Broda Shagi</span></button>
+      <button><span>Broda Shagi</span></button>
+      <button><span>Broda Shagi</span></button>
+      <button><span>Broda Shagi</span></button>
+    </div>
+  </div>
+</header>

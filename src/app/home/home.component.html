@@ -1,0 +1,180 @@
+<header class="header">
+  <div class="boss">
+    <div class="m1">
+      <button id="menuButton" (click)="toggleMenu()">
+        <i class="bx bx-menu"></i>
+      </button>
+
+      <img src="../../assets/Screenshot 2023-08-22 110622.png" alt="" />
+    </div>
+
+    <section class="m2">
+      <main class="bar">
+        <input type="text" [(ngModel)]="searchQuery" placeholder="Search" />
+        <button (click)="searchVideos()"><i class="bx bx-search"></i></button>
+      </main>
+      <button class="mic">
+        <i class="bx bx-microphone" style="color: #ffffff"></i>
+      </button>
+    </section>
+
+    <section class="logs">
+      <main class="nn">
+        <button>
+          <i class="material-icons" style="color: #ffffff">more_vert</i>
+        </button>
+        <div class="drop">
+          <div style="border-radius: 10px 10px 0px 0px">
+            <i class="material-icons">admin_panel_settings</i>
+            <span>Your data in YouTube</span>
+          </div>
+          <hr class="hr" />
+          <div>
+            <i class="material-icons">brightness_3</i>
+            <span>Appearance: Device theme</span>
+          </div>
+          <div>
+            <i class="material-icons">translate</i>
+            <span>Language: English</span>
+          </div>
+          <div>
+            <i class="material-icons">admin_panel_settings</i>
+            <span>Restricted Mode: Off</span>
+          </div>
+          <div>
+            <i class="material-icons">language</i>
+            <span>Location: Nigeria</span>
+          </div>
+          <div>
+            <i class="material-icons">keyboard</i>
+            <span>Keyboard Shortcuts</span>
+          </div>
+          <hr class="hr" />
+          <div>
+            <i class="material-icons">settings</i>
+            <span>Settings</span>
+          </div>
+          <hr class="hr" />
+          <div>
+            <i class="material-icons">help</i>
+            <span>Help</span>
+          </div>
+          <div style="border-radius: 0px 0px 10px 10px">
+            <i class="material-icons">feedback</i>
+            <span>Send</span>
+          </div>
+        </div>
+      </main>
+
+      <button class="s" routerLink="/Login">
+        <i class="material-icons" style="color: #3ea6ff">account_circle</i
+        ><span>Sign in</span>
+      </button>
+      <!-- <button><i class="bx bx-bell" style="color: #ffffff"></i></button>
+        <button style="background-color: white">
+          <img src="../../assets/luffy.png" alt="" />
+        </button> -->
+    </section>
+  </div>
+</header>
+<div class="body">
+  <div id="menu" [ngClass]="{ open: isMenuOpen }">
+    <div class="bankai">
+      <button id="Mad">
+        <i class="bx bxs-home" style="color: #ffffff"></i><br cl /><span id="mm"
+          >Home</span
+        >
+      </button>
+      <button id="Mad">
+        <i class="material-icons">bolt</i><span id="mm">Shorts</span>
+      </button>
+      <button id="Mad">
+        <i class="material-icons">subscriptions</i>
+        <span id="mm">Subscriptions</span>
+      </button>
+    </div>
+    <div class="bankai">
+      <button id="Mad">
+        <i class="material-icons">video_library</i><span id="mm">Library</span>
+      </button>
+      <button id="Mad">
+        <i class="material-icons">history</i><span id="mm">History</span>
+      </button>
+      <button>
+        <i class="material-icons">replay</i> <span>Watch Later</span>
+      </button>
+      <button>
+        <i class="material-icons">thumb_up</i> <span>Liked Videos</span>
+      </button>
+    </div>
+    <div class="bankai">
+      <p>Explore</p>
+      <button>
+        <i class="material-icons">local_fire_department</i><span>Trending</span>
+      </button>
+      <button>
+        <i class="material-icons">music_note</i><span>Music</span>
+      </button>
+      <button>
+        <i class="material-icons">sports_esports</i> <span>Gaming</span>
+      </button>
+      <button><i class="material-icons">newspaper</i> <span>News</span></button>
+      <button>
+        <i class="material-icons">emoji_events</i> <span>Sports</span>
+      </button>
+    </div>
+  </div>
+  <div class="main1" id="main1" [ngClass]="{ open1: expand1 }">
+    <div class="boss2">
+      <div class="boss2A">
+        <button style="background-color: white">
+          <span style="color: black">All</span>
+        </button>
+        <button><span>Music</span></button>
+        <button><span>Javascript</span></button>
+        <button><span>Computer Programming</span></button>
+        <button><span>Gaming</span></button>
+        <button><span>Nollywood</span></button>
+        <button><span>Liverpool Fc</span></button>
+        <button><span>One Piece</span></button>
+        <button><span>Manga</span></button>
+        <button><span>EAFC 24</span></button>
+        <button><span>Broda Shagi</span></button>
+        <button><span>Broda Shagi</span></button>
+        <button><span>Broda Shagi</span></button>
+        <button><span>Broda Shagi</span></button>
+        <button><span>Broda Shagi</span></button>
+      </div>
+    </div>
+    <div class="boss3">
+      <div class="vids" *ngFor="let video of videos">
+        <div class="bz">
+          <img [routerLink]="['/video', video.id.videoId]" style="height: 100%;" [src]="video.snippet.thumbnails.high  .url" class="minimalv" alt="" />
+        </div>
+        <div class="details">
+          <div class="ax">
+            <img [src]="getCreatorProfileImage(video.snippet.channelId)" alt="" />
+          </div>
+          <div class="bxx">
+            <div class="t1">
+              <h5>{{ video.snippet.title }}</h5>
+            </div>
+            <div class="t2">
+              <span>{{video.snippet.channelTitle}}</span>
+              <p>{{video.snippet.publishedAt}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- <button (click)="fetchCaptions()">GEN</button> -->
+<!-- <a [routerLink]="['/video', video.id.videoId]">
+  <img
+    style="width: 100%"
+    [src]="video.snippet.thumbnails.high.url"
+    alt=""
+/></a>
+<h3></h3> -->

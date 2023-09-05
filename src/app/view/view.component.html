@@ -1,0 +1,82 @@
+<!-- <h2>Video Display</h2>
+    <div class="video-container">
+      <iframe [src]="videoUrl" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+    </div> -->
+
+<header class="header">
+  <div class="boss">
+    <div class="m1">
+      <button id="menuButton" (click)="toggleMenu()">
+        <i class="bx bx-menu"></i>
+      </button>
+
+      <div id="menu" [ngClass]="{ open: isMenuOpen }">
+        <div class="bankai">
+          <button>
+            <i class="bx bxs-home" style="color: #ffffff"></i><span>Home</span>
+          </button>
+          <button><i class="material-icons">bolt</i><span>Shorts</span></button>
+          <button>
+            <i class="material-icons">subscriptions</i>
+            <span>Subscriptions</span>
+          </button>
+        </div>
+        <div class="bankai">
+          <button>
+            <i class="material-icons">video_library</i><span>Library</span>
+          </button>
+          <button>
+            <i class="material-icons">history</i><span>History</span>
+          </button>
+          <button>
+            <i class="material-icons">replay</i> <span>Watch Later</span>
+          </button>
+          <button>
+            <i class="material-icons">thumb_up</i> <span>Liked Videos</span>
+          </button>
+        </div>
+        <div class="bankai">
+          <p>Explore</p>
+          <button>
+            <i class="material-icons">local_fire_department</i
+            ><span>Trending</span>
+          </button>
+          <button>
+            <i class="material-icons">music_note</i><span>Music</span>
+          </button>
+          <button>
+            <i class="material-icons">sports_esports</i> <span>Gaming</span>
+          </button>
+          <button>
+            <i class="material-icons">newspaper</i> <span>News</span>
+          </button>
+          <button>
+            <i class="material-icons">emoji_events</i> <span>Sports</span>
+          </button>
+        </div>
+      </div>
+
+      <img src="../../assets/Screenshot 2023-08-22 110622.png" alt="" />
+    </div>
+
+    <section class="m2">
+      <main class="bar">
+        <input type="text" placeholder="Search" />
+        <button><i class="bx bx-search"></i></button>
+      </main>
+      <button class="mic">
+        <i class="bx bx-microphone" style="color: #ffffff"></i>
+      </button>
+    </section>
+
+    <section class="logs">
+      <button><i class="bx bx-video-plus" style="color: #ffffff"></i></button>
+      <button><i class="bx bx-bell" style="color: #ffffff"></i></button>
+      <button style="background-color: white">
+        <img src="../../assets/luffy.png" alt="" />
+      </button>
+    </section>
+  </div>
+</header>
+
+<div class="body"></div>
